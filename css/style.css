@@ -1,0 +1,141 @@
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #1ED760;
+  color: #fff;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  margin-right: 10px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #1DB954;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#search-results li {
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-results {
+  width: 40%;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.song-cover {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+#cover-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 1;
+}
+
+.song-info {
+  text-align: center;
+  color: #fff;
+}
+
+.song-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.artist-name {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.album-name {
+  font-size: 16px;
+}
+
+.spotify {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: flex-end; /* Centrar verticalmente abajo */
+  height: 20vh; /* Opcional: ajusta la altura al 100% del viewport */
+}
+
+.spotify img {
+  max-width: 30%; /* Para adaptarse al contenedor */
+  height: auto; /* Para mantener la proporción de la imagen */
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .search-results {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .song-cover {
+    width: 100%;
+  }
+
+  #cover-image {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,25 @@
+# Aplicación de Búsqueda de Música con Spotify API
+
+Esta es una aplicación web que utiliza la API de Spotify para permitir a los usuarios buscar y descubrir música. Proporciona funciones para buscar canciones, álbumes, artistas y listas de reproducción, y muestra detalles específicos de cada elemento, como su duración, popularidad y género.
+
+## Tecnologías utilizadas
+
+- HTML
+- CSS
+- JavaScript
+- Spotify API
+
+## Requisitos previos
+
+Antes de ejecutar la aplicación, necesitarás los siguientes requisitos previos:
+
+- Cuenta de Spotify Developer para obtener las credenciales de API.
+- Client ID y Client Secret de la aplicación registrada en Spotify Developer Dashboard.
+- Configurar las credenciales de la aplicación en el archivo `index.js`.
+
+## Instalación
+
+1. Clona el repositorio:
+
+   ```bash
+   git clone https://github.com/tu-usuario/tu-repositorio.git
