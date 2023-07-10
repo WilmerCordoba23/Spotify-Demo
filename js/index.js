@@ -1,5 +1,5 @@
-const clientId = 'TU_CLIENT_ID';
-const clientSecret = 'TU_CLIENT_SECRET';
+const clientId = '39800292014d41bb9bc56b7e6930e21a';
+const clientSecret = '9654e5e969284b948522d56a357116d4';
 const redirectUri = 'http://127.0.0.1:5500/index.html';
 
 // Obtener token de acceso
