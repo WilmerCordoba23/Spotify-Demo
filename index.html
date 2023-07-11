@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Spotify API Demo</title>
   <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
+
 <body>
-    <div class="container">
-        <h1>Spotify API Demo</h1>
-        <form id="search-form">
-          <input type="text" id="search-input" placeholder="Buscar canciones...">
-          <button type="submit">Buscar</button>
-        </form>
-        <div class="content">
-          <ul id="search-results" class="search-results"></ul>
-          <div id="song-cover" class="song-cover">
-            <img id="cover-image" src="" alt="">
-            <div class="overlay"></div>
-            <div id="song-info" class="song-info">
-              <h3 id="song-name" class="song-name"></h3>
-              <p id="artist-name" class="artist-name"></p>
-              <p id="album-name" class="album-name"></p>
-              <p id="album-time" class="album-name"></p>
-              <audio id="audio-player"></audio>
-            </div>
-          </div>
+  <div class="container">
+    <h1>Spotify API Demo</h1>
+    <form id="search-form">
+      <input type="text" id="search-input" placeholder="Buscar canciones...">
+      <button type="submit">Buscar</button>
+    </form>
+    <div class="content">
+      <ul id="search-results" class="search-results"></ul>
+      <div id="song-cover" class="song-cover">
+        <img id="cover-image">
+        <div class="overlay" id="overlay"></div>
+        <div id="song-info" class="song-info">
+          <h3 id="song-name" class="song-name"></h3>
+          <p id="artist-name" class="artist-name"></p>
+          <p id="album-name" class="album-name"></p>
+          <p id="album-time" class="album-name"></p>
+          <audio id="audio-player"></audio>
         </div>
-        <div class="spotify">
-          <img src="./img/Spotify-Logo.png" alt="Logo de Spotify">
-        </div>
+        <a class="spotify-button" id="spotify-button">
+          Escuchar en Spotify
+          <span class="spotify-icon"></span>
+        </a>
       </div>
+    </div>
+    <div class="spotify">
+      <img src="./img/Spotify-Logo.png" alt="Logo de Spotify">
+    </div>
+  </div>
 </body>
 <script src="./js/index.js"></script>
+
 </html>

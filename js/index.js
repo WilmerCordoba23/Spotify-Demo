@@ -29,7 +29,6 @@ async function searchSongs(searchTerm) {
             },
         }
     );
-        console.log(response)
     const data = await response.json();
     return data.tracks.items;
 }
@@ -38,7 +37,6 @@ async function searchSongs(searchTerm) {
 function displaySearchResults(results) {
     const searchResults = document.getElementById('search-results');
     searchResults.innerHTML = '';
-console.log(results)
     results.forEach((result) => {
         const item = document.createElement('li');
         item.textContent = result.name;
@@ -49,6 +47,9 @@ console.log(results)
         searchResults.appendChild(item);
     });
 }
+
+const spotifyButton = document.getElementById('spotify-button');
+spotifyButton.style.display = 'none';
 
 // Mostrar detalles de una canción
 function displaySongDetails(song) {
@@ -65,9 +66,11 @@ function displaySongDetails(song) {
         artist: song.artists[0].name,
         album: song.album.name,
         albumTime: msToMinutesAndSeconds(song.duration_ms),
-        preview_url: song.preview_url
+        preview_url: song.preview_url,
+        external_urls: song.external_urls.spotify
     };
-    
+
+    redirectToSpotify(songData.external_urls)
     playPreview(songData.preview_url)
     coverImage.alt = songData.name;
     coverImage.src = songData.coverImageURL;
@@ -75,6 +78,7 @@ function displaySongDetails(song) {
     artistName.textContent = songData.artist;
     albumName.textContent = songData.album;
     albumTime.textContent = songData.albumTime;
+    spotifyButton.style.display = 'block';
 }
 
 // Convertir milisegundos a minutos y segundos
@@ -100,13 +104,29 @@ const audioPlayer = document.getElementById('audio-player');
 function playPreview(url) {
     // Establece la URL de la vista previa en el reproductor de audio
     audioPlayer.src = url;
-  
+
     // Reproduce la canción
     audioPlayer.play();
-  }
-  
-  // Función para detener la reproducción
-  function stopPlayback() {
+}
+
+// Función para detener la reproducción
+function stopPlayback() {
     audioPlayer.pause();
     audioPlayer.currentTime = 0;
-  }
+}
+
+let spotifyLink;
+
+function redirectToSpotify(link) {
+    spotifyLink = link;
+}
+
+spotifyButton.addEventListener('click', (event) => {
+    window.location.href = spotifyLink;
+});
+
+const overlay = document.getElementById('overlay');
+
+overlay.addEventListener('click', (event) => {
+    stopPlayback()
+});
