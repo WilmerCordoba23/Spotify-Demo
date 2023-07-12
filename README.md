@@ -42,8 +42,6 @@ Si deseas obtener una copia de este proyecto en tu máquina local, puedes seguir
 git clone https://github.com/WilmerCordoba23/Spotify-Demo.git
 ```
 
-Asegúrate de reemplazar "WilmerCordoba23" por tu nombre de usuario en GitHub.
-
 4. ¡Listo! Ahora tendrás una copia del proyecto en tu máquina local que podrás modificar y ejecutar.
 
 ## Contribuciones
