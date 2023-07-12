@@ -39,10 +39,8 @@ Si deseas obtener una copia de este proyecto en tu máquina local, puedes seguir
 3. Una vez que hayas creado tu propio fork del repositorio, puedes clonarlo en tu máquina local utilizando el siguiente comando de Git:
 
 ```
-git clone https://github.com/TU_NOMBRE_DE_USUARIO/Spotify-Demo.git
+git clone https://github.com/WilmerCordoba23/Spotify-Demo.git
 ```
-
-Asegúrate de reemplazar "TU_NOMBRE_DE_USUARIO" por tu nombre de usuario en GitHub.
 
 4. ¡Listo! Ahora tendrás una copia del proyecto en tu máquina local que podrás modificar y ejecutar.
 
